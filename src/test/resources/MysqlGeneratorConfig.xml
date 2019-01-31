@@ -12,7 +12,7 @@
 		<property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter" />
 
 		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
-		<!-- <plugin type="org.mybatis.generator.plugins.SerializablePlugin" /> -->
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" /> 
 
 		<!-- 自定义的Pagination，也需要打成jar依赖进来 -->
 		<plugin type="com.yejg.mybatis.generator.plugins.OverIsMergeablePlugin" />
@@ -37,7 +37,9 @@
 		<javaClientGenerator targetPackage="com.yejg.mapper" targetProject="D:/generate" type="XMLMAPPER" />
 
 		<!-- 想要生成的表 -->
-		<table schema="test" tableName="sys_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<!-- enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" 
+		enableSelectByExample="false" selectByExampleQueryId="false" -->
+		<table schema="test" tableName="sys_user" domainObjectName="User" ></table>
 	</context>
 
 </generatorConfiguration>  
