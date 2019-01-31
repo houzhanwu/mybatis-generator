@@ -18,6 +18,7 @@ import java.util.Properties;
  * 开发人员: @author yejg<br>
  * 开发时间: 2018年10月15日<br>
  */
+@SuppressWarnings("unused")
 public class SerializableModelAndExamplePlugin extends PluginAdapter {
 
 	private FullyQualifiedJavaType serializable;
