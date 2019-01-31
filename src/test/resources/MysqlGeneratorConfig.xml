@@ -25,9 +25,6 @@
 		<!-- jdbc连接信息 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver" 
 			connectionURL="jdbc:mysql://127.0.0.1:3306/test" userId="root" password="root">
-		  <!-- 针对Oracle数据库 -->
-		  <!-- <property name="remarksReporting" value="true" /> -->
-		  
 		  <!-- 针对mysql数据库 -->
 		  <property name="useInformationSchema" value="true" />
 		</jdbcConnection>
@@ -40,11 +37,7 @@
 		<javaClientGenerator targetPackage="com.yejg.mapper" targetProject="E:/generate" type="XMLMAPPER" />
 
 		<!-- 想要生成的表 -->
-		<!-- <table tableName="users">
-			<property name="useActualColumnNames" value="true" />
-		    <generatedKey type="pre" column="SERIAL_NO" sqlStatement="select users_seq.nextval from dual"></generatedKey>
-		</table> -->
-		<table schema="maoming" tableName="alarm_data" domainObjectName="AlarmData" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		<table schema="test" tableName="sys_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 	</context>
 
 </generatorConfiguration>  
