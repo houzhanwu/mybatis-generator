@@ -15,7 +15,7 @@ import org.mybatis.generator.api.dom.xml.Attribute;
 import org.mybatis.generator.api.dom.xml.TextElement;
 import org.mybatis.generator.api.dom.xml.XmlElement;
 
-public class MySQLPaginationPlugin extends PluginAdapter {
+public class MysqlPaginationPlugin extends PluginAdapter {
 
 	@Override
 	public boolean validate(List<String> list) {
