@@ -9,18 +9,21 @@ import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
 public class MainGenerate {
+	public final static String Mysql = "MysqlGeneratorConfig.xml";
+	public static final String Oracle = "OracleGeneratorConfig.xml";
 
 	public static void main(String[] args) throws Exception {
+
 		List<String> warnings = new ArrayList<String>();
 		boolean overwrite = true;
 		ConfigurationParser cp = new ConfigurationParser(warnings);
 
-		// String configFilePath = "E:/eclipse_workspace/workspace_luna_experiment_branch/mybatis-generator/src/main/resources/generatorConfig.xml";
+		// String configFilePath =
+		// "E:/eclipse_workspace/workspace_luna_experiment_branch/mybatis-generator/src/main/resources/generatorConfig.xml";
 		// FileInputStream fis = new FileInputStream(configFilePath);
 		// Configuration config = cp.parseConfiguration(fis);
 
-		Configuration config = cp.parseConfiguration(MainGenerate.class.getClassLoader().getResourceAsStream("OracleGeneratorConfig.xml"));
-
+		Configuration config = cp.parseConfiguration(MainGenerate.class.getClassLoader().getResourceAsStream(Oracle));
 		DefaultShellCallback callback = new DefaultShellCallback(overwrite);
 		MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
 		myBatisGenerator.generate(null);
