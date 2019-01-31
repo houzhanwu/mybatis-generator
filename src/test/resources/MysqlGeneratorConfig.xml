@@ -2,10 +2,8 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 	<!-- oracle驱动jar路径 -->
-	<!-- <classPathEntry location="E:/apache-maven-3.3.3/repository/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar" /> -->
-	<classPathEntry location="E:/mavenlocal/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar" />
-
-	<context id="oracle">
+	<classPathEntry location="F://package//mysql-connector-java-5.1.44-bin.jar" />
+	<context id="mysql">
 		<!-- 生成的Java文件的编码 -->
 		<property name="javaFileEncoding" value="UTF-8" />
 		<!-- 格式化java代码 -->
@@ -18,20 +16,20 @@
 
 		<!-- 自定义的Pagination，也需要打成jar依赖进来 -->
 		<plugin type="com.yejg.mybatis.generator.plugins.OverIsMergeablePlugin" />
-		<plugin type="com.yejg.mybatis.generator.plugins.OraclePaginationPlugin" />
+		<plugin type="com.yejg.mybatis.generator.plugins.MysqlPaginationPlugin" />
 
         <!-- 自定义注释 -->
         <commentGenerator type="com.yejg.mybatis.generator.plugins.MyCommentGenerator" />
         
 
 		<!-- jdbc连接信息 -->
-		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" 
-			connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:YEJG" userId="XXX" password="XXX">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+			connectionURL="jdbc:mysql://127.0.0.1:3306/test" userId="root" password="root">
 		  <!-- 针对Oracle数据库 -->
-		  <property name="remarksReporting" value="true" />
+		  <!-- <property name="remarksReporting" value="true" /> -->
 		  
 		  <!-- 针对mysql数据库 -->
-		  <!-- <property name="useInformationSchema" value="true" /> -->
+		  <property name="useInformationSchema" value="true" />
 		</jdbcConnection>
 
 		<!-- 生成的表对象路径 -->
@@ -42,10 +40,11 @@
 		<javaClientGenerator targetPackage="com.yejg.mapper" targetProject="E:/generate" type="XMLMAPPER" />
 
 		<!-- 想要生成的表 -->
-		<table tableName="users">
+		<!-- <table tableName="users">
 			<property name="useActualColumnNames" value="true" />
 		    <generatedKey type="pre" column="SERIAL_NO" sqlStatement="select users_seq.nextval from dual"></generatedKey>
-		</table>
+		</table> -->
+		<table schema="maoming" tableName="alarm_data" domainObjectName="AlarmData" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 	</context>
 
 </generatorConfiguration>  
