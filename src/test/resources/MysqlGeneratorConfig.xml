@@ -30,11 +30,11 @@
 		</jdbcConnection>
 
 		<!-- 生成的表对象路径 -->
-		<javaModelGenerator targetPackage="com.yejg.model" targetProject="E:/generate" />
+		<javaModelGenerator targetPackage="com.yejg.model" targetProject="D:/generate" />
 		<!-- 生成的xml存放路径 -->
-		<sqlMapGenerator targetPackage="com.yejg.mapper.xml" targetProject="E:/generate" />
+		<sqlMapGenerator targetPackage="com.yejg.mapper.xml" targetProject="D:/generate" />
 		<!-- 生成的dao mapper路径 -->
-		<javaClientGenerator targetPackage="com.yejg.mapper" targetProject="E:/generate" type="XMLMAPPER" />
+		<javaClientGenerator targetPackage="com.yejg.mapper" targetProject="D:/generate" type="XMLMAPPER" />
 
 		<!-- 想要生成的表 -->
 		<table schema="test" tableName="sys_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
