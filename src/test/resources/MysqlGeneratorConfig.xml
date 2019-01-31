@@ -2,7 +2,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 	<!-- oracle驱动jar路径 -->
-	<classPathEntry location="F://package//mysql-connector-java-5.1.44-bin.jar" />
+	<classPathEntry location="E://mavenlocal//mysql//mysql-connector-java//5.1.44//mysql-connector-java-5.1.44-bin.jar" />
 	<context id="mysql">
 		<!-- 生成的Java文件的编码 -->
 		<property name="javaFileEncoding" value="UTF-8" />
