@@ -2,8 +2,8 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 	<!-- oracle驱动jar路径 -->
-	<classPathEntry location="E:/apache-maven-3.3.3/repository/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar" />
-
+	<!-- <classPathEntry location="E:/apache-maven-3.3.3/repository/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar" /> -->
+	<classPathEntry location="E:/mavenlocal/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar" />
 
 	<context id="oracle">
 		<!-- 生成的Java文件的编码 -->
@@ -25,7 +25,9 @@
         
 
 		<!-- jdbc连接信息 -->
-		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:YEJG" userId="XXX" password="XXX">
+		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" 
+			connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:YEJG" userId="XXX" password="XXX">
+		  <!-- 针对Oracle数据库 -->
 		  <property name="remarksReporting" value="true" />
 		  
 		  <!-- 针对mysql数据库 -->
