@@ -19,7 +19,7 @@ public class MainGenerate {
 		// FileInputStream fis = new FileInputStream(configFilePath);
 		// Configuration config = cp.parseConfiguration(fis);
 
-		Configuration config = cp.parseConfiguration(MainGenerate.class.getClassLoader().getResourceAsStream("generatorConfig.xml"));
+		Configuration config = cp.parseConfiguration(MainGenerate.class.getClassLoader().getResourceAsStream("OracleGeneratorConfig.xml"));
 
 		DefaultShellCallback callback = new DefaultShellCallback(overwrite);
 		MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
