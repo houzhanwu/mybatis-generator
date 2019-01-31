@@ -44,7 +44,7 @@
 		<!-- 想要生成的表 -->
 		<table tableName="users">
 			<property name="useActualColumnNames" value="true" />
-		    <generatedKey type="pre" column="SERIAL_NO" sqlStatement="select users_seq.nextval from dual"></generatedKey>
+		    <generatedKey type="pre" column="ID" sqlStatement="select users_seq.nextval from dual"></generatedKey>
 		</table>
 	</context>
 
