@@ -26,7 +26,7 @@
 
 		<!-- jdbc连接信息 -->
 		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" 
-			connectionURL="jdbc:oracle:thin:@39.108.3.215:1521:TEST" userId="TY_USER" password="TY_PASS">
+			connectionURL="jdbc:oracle:thin:@39.108.3.215:1521:TY_USER" userId="TY_USER" password="TY_PASS">
 		  <!-- 针对Oracle数据库 -->
 		  <property name="remarksReporting" value="true" />
 		  
